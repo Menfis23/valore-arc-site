@@ -7,70 +7,29 @@
 <meta name="description" content="Valore Group is a Pittsburgh social enterprise connecting displaced and skilled professionals to real opportunity — through Valore Tech, Valore Talent, and Valore Infrastructure.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cdefs%3E%3CradialGradient id='w' cx='35%25' cy='28%25' r='78%25'%3E%3Cstop offset='0%25' stop-color='%239C3E2F'/%3E%3Cstop offset='65%25' stop-color='%237A2320'/%3E%3Cstop offset='100%25' stop-color='%235E1A18'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='120' cy='120' r='108' fill='url(%23w)'/%3E%3Ccircle cx='120' cy='120' r='92' fill='none' stroke='%23C88A4A' stroke-width='2'/%3E%3Ctext x='120' y='152' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='104' fill='%23EFD9B8'%3EV%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo.png">
 <style>
   :root{
     --cream:#F5EFE3;
-    --cream-2:#EFE7D6;
-    --ink:#241C15;
-    --ink-70:rgba(36,28,21,.72);
-    --ink-50:rgba(36,28,21,.5);
-    --clay:#B24A24;
-    --clay-dark:#8F3A1B;
-    --gold:#9C7A34;
-    --wax:#7A2320;
-    --wax-light:#9C3E2F;
-    --line:#DCD0B7;
+    --cream-2:#EFE6D2;
+    --ink:#2A2018;
+    --ink-70:rgba(42,32,24,.72);
+    --ink-50:rgba(42,32,24,.5);
+    --terracotta:#C9691E;
+    --terracotta-dark:#A6530F;
+    --leaf:#33532F;
+    --leaf-dark:#233B21;
+    --gold:#B08A3E;
+    --line:#DED0B0;
     --cream-on-ink:#F1E8D6;
     --cream-on-ink-70:rgba(241,232,214,.72);
-    --radius:2px;
+    --radius:3px;
     --max:1180px;
-    --shadow-sm: 0 1px 2px rgba(36,28,21,.06), 0 2px 8px rgba(36,28,21,.05);
-    --shadow-md: 0 4px 12px rgba(36,28,21,.08), 0 12px 32px rgba(36,28,21,.07);
-    --shadow-lg: 0 8px 24px rgba(36,28,21,.10), 0 24px 56px rgba(36,28,21,.10);
+    --shadow-sm: 0 1px 2px rgba(42,32,24,.06), 0 2px 8px rgba(42,32,24,.05);
+    --shadow-md: 0 4px 12px rgba(42,32,24,.08), 0 12px 32px rgba(42,32,24,.07);
+    --shadow-lg: 0 8px 24px rgba(42,32,24,.10), 0 24px 56px rgba(42,32,24,.10);
   }
-
-  /* ---------- MASTHEAD RIBBON ---------- */
-  .masthead-ribbon{
-    background:var(--ink); color:var(--cream-on-ink-70);
-    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em;
-    text-transform:uppercase; text-align:center; padding:9px 12px;
-  }
-  .masthead-ribbon strong{ color:var(--gold); font-weight:600; }
-
-  /* ---------- CERTIFICATE FRAME ---------- */
-  .certificate-frame{
-    position:fixed; inset:14px; pointer-events:none; z-index:40;
-    border:1px solid rgba(178,74,36,.16);
-  }
-  .certificate-frame::before, .certificate-frame::after{
-    content:""; position:absolute; width:26px; height:26px;
-    border:1px solid var(--gold); opacity:.55;
-  }
-  .certificate-frame::before{ top:-1px; left:-1px; border-right:none; border-bottom:none; }
-  .certificate-frame::after{ bottom:-1px; right:-1px; border-left:none; border-top:none; }
-  @media (max-width:720px){ .certificate-frame{ display:none; } }
-
-  /* ---------- LEDGER SECTION ---------- */
-  .ledger{ background:var(--ink); color:var(--cream-on-ink); border-top:1px solid rgba(241,232,214,.1); }
-  .ledger .eyebrow{ color:var(--gold); }
-  .ledger .eyebrow::before{ background:var(--gold); }
-  .ledger-grid{
-    display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
-    background:rgba(241,232,214,.12); margin-top:44px;
-    border:1px solid rgba(241,232,214,.12);
-  }
-  .ledger-entry{ background:var(--ink); padding:30px 26px; }
-  .ledger-entry .num{
-    font-family:'Fraunces', serif; font-weight:600; font-size:clamp(30px,3.4vw,42px);
-    color:var(--cream-on-ink);
-  }
-  .ledger-entry .label{
-    margin-top:8px; font-family:'IBM Plex Mono', monospace; font-size:11.5px;
-    letter-spacing:.08em; text-transform:uppercase; color:var(--cream-on-ink-70);
-  }
-  @media (max-width:760px){ .ledger-grid{ grid-template-columns:1fr 1fr; } }
 
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -81,37 +40,43 @@
 
   body{
     margin:0;
-    background-color:var(--cream);
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.14  0 0 0 0 0.11  0 0 0 0 0.08  0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background:var(--cream);
     color:var(--ink);
-    font-family:'Public Sans', sans-serif;
+    font-family:'Archivo', sans-serif;
     font-size:16px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
 
   h1,h2,h3{
-    font-family:'Fraunces', serif;
+    font-family:'Newsreader', serif;
     font-weight:600;
-    line-height:1.08;
+    line-height:1.1;
     margin:0;
     letter-spacing:-0.01em;
   }
-  h1, .contact h2{
-    text-shadow:0 1px 0 rgba(255,255,255,.35);
-  }
-  .contact h1, .contact h2{ text-shadow:0 1px 0 rgba(0,0,0,.3); }
 
   a{color:inherit;}
   img,svg{display:block; max-width:100%;}
 
+  .logo-crop{
+    display:inline-block;
+    width:34px; height:34px; border-radius:50%;
+    overflow:hidden; flex-shrink:0;
+    background:var(--cream);
+  }
+  .logo-crop img{
+    width:100%; height:180%; object-fit:cover; object-position:top;
+    transform:translateY(-4%);
+  }
+
   .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
+    font-family:'Archivo', sans-serif;
+    font-weight:700;
     font-size:12px;
-    letter-spacing:.14em;
+    letter-spacing:.12em;
     text-transform:uppercase;
-    color:var(--clay-dark);
+    color:var(--terracotta-dark);
     display:flex;
     align-items:center;
     gap:10px;
@@ -119,17 +84,26 @@
   .eyebrow::before{
     content:"";
     width:22px;
-    height:1px;
-    background:var(--clay);
+    height:2px;
+    background:var(--terracotta);
     display:inline-block;
+    border-radius:2px;
   }
 
   .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
 
   a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
-    outline:2px solid var(--clay);
+    outline:2px solid var(--terracotta);
     outline-offset:3px;
   }
+
+  /* ---------- MASTHEAD RIBBON ---------- */
+  .masthead-ribbon{
+    background:var(--ink); color:var(--cream-on-ink-70);
+    font-family:'Archivo', sans-serif; font-weight:600; font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; text-align:center; padding:9px 12px;
+  }
+  .masthead-ribbon strong{ color:#E3B972; font-weight:700; }
 
   /* ---------- NAV ---------- */
   header.site-nav{
@@ -144,15 +118,14 @@
     border-bottom-color:transparent;
   }
   .nav-inner{
-    max-width:var(--max); margin:0 auto; padding:16px 28px;
+    max-width:var(--max); margin:0 auto; padding:14px 28px;
     display:flex; align-items:center; justify-content:space-between; gap:20px;
   }
   .brand{
-    display:flex; align-items:center; gap:10px;
-    font-family:'Fraunces', serif; font-weight:600; font-size:19px;
+    display:flex; align-items:center; gap:11px;
+    font-family:'Newsreader', serif; font-weight:600; font-size:19px;
     text-decoration:none; color:var(--ink);
   }
-  .brand .mark{width:30px; height:30px;}
   .nav-links{
     display:flex; align-items:center; gap:28px;
     list-style:none; margin:0; padding:0;
@@ -164,15 +137,15 @@
     border-bottom:2px solid transparent;
     transition:border-color .2s ease, color .2s ease;
   }
-  .nav-links a:hover{border-color:var(--clay);}
+  .nav-links a:hover{border-color:var(--terracotta);}
   .lang-toggle{
     display:flex; border:1px solid var(--line); border-radius:999px; overflow:hidden;
-    font-family:'IBM Plex Mono', monospace; font-size:12px;
+    font-family:'Archivo', sans-serif; font-weight:600; font-size:12px;
   }
   .lang-toggle button{
     background:none; border:none; cursor:pointer;
     padding:9px 13px; min-height:44px;
-    color:var(--ink-70); font-family:inherit; font-size:12px; letter-spacing:.05em;
+    color:var(--ink-70); font-family:inherit; font-size:12px; letter-spacing:.03em;
     transition:background .2s ease, color .2s ease;
   }
   .lang-toggle button[aria-pressed="true"]{
@@ -193,7 +166,7 @@
 
   @media (max-width:860px){
     .nav-links{
-      position:fixed; inset:64px 0 auto 0; background:var(--cream);
+      position:fixed; inset:60px 0 auto 0; background:var(--cream);
       flex-direction:column; align-items:flex-start; gap:0;
       border-bottom:1px solid var(--line);
       transform:translateY(-8px); opacity:0; pointer-events:none;
@@ -207,7 +180,7 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    padding:96px 0 88px;
+    padding:88px 0 80px;
     position:relative;
     overflow:hidden;
   }
@@ -215,7 +188,7 @@
     display:grid; grid-template-columns:1.15fr .85fr; gap:64px; align-items:center;
   }
   .hero h1{
-    font-size:clamp(38px, 5.4vw, 62px);
+    font-size:clamp(38px, 5.4vw, 60px);
     margin:18px 0 22px;
   }
   .hero p.lead{
@@ -224,7 +197,7 @@
   .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
   .btn{
     display:inline-flex; align-items:center; gap:8px;
-    font-family:'Public Sans', sans-serif; font-weight:700; font-size:14.5px;
+    font-family:'Archivo', sans-serif; font-weight:700; font-size:14.5px;
     padding:15px 24px; min-height:44px;
     border-radius:var(--radius);
     text-decoration:none; cursor:pointer; border:1px solid transparent;
@@ -232,55 +205,52 @@
   }
   .btn:hover{ transform:translateY(-2px); }
   .btn:active{ transform:translateY(0); }
-  .btn-primary{ background:var(--clay); color:#fff; box-shadow:0 1px 3px rgba(178,74,36,.25), 0 8px 20px rgba(178,74,36,.22); }
-  .btn-primary:hover{ background:var(--clay-dark); box-shadow:0 2px 6px rgba(143,58,27,.3), 0 12px 28px rgba(143,58,27,.28); }
+  .btn-primary{ background:var(--terracotta); color:#fff; box-shadow:0 1px 3px rgba(201,105,30,.25), 0 8px 20px rgba(201,105,30,.22); }
+  .btn-primary:hover{ background:var(--terracotta-dark); box-shadow:0 2px 6px rgba(166,83,15,.3), 0 12px 28px rgba(166,83,15,.28); }
   .btn-ghost{ background:transparent; color:var(--ink); border-color:var(--ink); }
   .btn-ghost:hover{ background:var(--ink); color:var(--cream); }
 
   .quote-block{
-    margin-top:40px; padding-top:28px; border-top:1px solid var(--line);
-    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
+    margin-top:38px; padding-top:26px; border-top:1px solid var(--line);
+    font-family:'Newsreader', serif; font-style:italic; font-weight:400;
     font-size:19px; line-height:1.5; color:var(--ink); max-width:56ch;
   }
   .quote-block cite{
-    display:block; margin-top:12px; font-style:normal; font-family:'IBM Plex Mono', monospace;
-    font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold);
+    display:block; margin-top:12px; font-style:normal; font-family:'Archivo', sans-serif; font-weight:700;
+    font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--gold);
   }
 
-  /* hero seal */
-  .hero-seal-wrap{ display:flex; justify-content:center; align-items:center; }
-  .seal{
-    width:min(320px, 60vw); height:min(320px, 60vw);
-    transform:scale(1.5) rotate(-14deg);
-    opacity:0;
+  /* ---------- HERO LOGO PANEL ---------- */
+  .hero-logo-wrap{ display:flex; justify-content:center; align-items:center; }
+  .hero-logo-card{
+    width:min(360px, 78vw);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:28px;
+    box-shadow:var(--shadow-lg);
+    opacity:0; transform:translateY(14px) scale(.98);
   }
-  .seal.stamped{
-    animation:stamp .62s cubic-bezier(.2,.9,.25,1) forwards;
+  .hero-logo-card.in{
+    animation:logoIn .7s cubic-bezier(.2,.8,.25,1) forwards;
   }
-  @keyframes stamp{
-    0%{ transform:scale(1.6) rotate(-18deg); opacity:0; }
-    55%{ transform:scale(.94) rotate(2deg); opacity:1; }
-    75%{ transform:scale(1.03) rotate(-1deg); }
-    100%{ transform:scale(1) rotate(0deg); opacity:1; }
-  }
-  @media (prefers-reduced-motion: reduce){
-    .seal{ transform:none; opacity:1; }
-  }
+  @keyframes logoIn{ to{ opacity:1; transform:translateY(0) scale(1); } }
+  @media (prefers-reduced-motion: reduce){ .hero-logo-card{ opacity:1; transform:none; } }
+  .hero-logo-card img{ width:100%; height:auto; }
 
   /* ---------- SECTIONS shared ---------- */
-  section{ padding:88px 0; }
-  .section-head{ max-width:64ch; margin-bottom:52px; padding-top:26px; border-top:3px double var(--line); position:relative; }
+  section{ padding:84px 0; }
+  .section-head{ max-width:64ch; margin-bottom:48px; padding-top:22px; border-top:1px solid var(--line); position:relative; }
   .section-head::before{
-    content:""; position:absolute; top:-6px; left:0;
-    width:10px; height:10px; border-radius:50%; background:var(--wax);
-    box-shadow:22px 0 0 -3px var(--gold);
+    content:""; position:absolute; top:-1px; left:0;
+    width:56px; height:3px; background:var(--terracotta); border-radius:2px;
   }
   .section-head h2{ font-size:clamp(28px, 3.6vw, 40px); margin-top:14px; }
   .section-head p{ color:var(--ink-70); font-size:17px; margin-top:14px; }
 
-  /* ---------- WAX DIVIDER ---------- */
-  .wax-divider{ display:flex; align-items:center; justify-content:center; padding:0; }
-  .wax-divider svg{ width:34px; height:34px; opacity:.8; }
+  /* ---------- GROWTH DIVIDER ---------- */
+  .growth-divider{ display:flex; align-items:center; justify-content:center; padding:8px 0; }
+  .growth-divider svg{ width:30px; height:30px; opacity:.85; }
 
   .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
   .reveal.in{ opacity:1; transform:translateY(0); }
@@ -294,13 +264,15 @@
   .division-card{
     background:var(--cream);
     border:1px solid var(--line);
-    border-top:3px solid var(--wax);
+    border-top:3px solid var(--terracotta);
     padding:36px 30px 32px;
     display:flex; flex-direction:column; gap:18px;
     min-height:100%;
     box-shadow:var(--shadow-sm);
     transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
   }
+  .division-card:nth-child(2){ border-top-color:var(--leaf); }
+  .division-card:nth-child(3){ border-top-color:var(--terracotta-dark); }
   .division-card:hover{
     transform:translateY(-5px);
     box-shadow:var(--shadow-md);
@@ -309,9 +281,9 @@
   .division-card.reveal.in:nth-child(2){ animation-delay:90ms; }
   .division-card.reveal.in:nth-child(3){ animation-delay:180ms; }
   @keyframes cardReveal{ to{ opacity:1; transform:translateY(0); } }
-  .division-card .seal-small{ width:64px; height:64px; }
+  .division-card .icon-badge{ width:60px; height:60px; }
   .division-card .div-label{
-    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em;
+    font-family:'Archivo', sans-serif; font-weight:700; font-size:11px; letter-spacing:.12em;
     text-transform:uppercase; color:var(--gold);
   }
   .division-card h3{ font-size:24px; margin-top:2px; }
@@ -323,11 +295,11 @@
   }
   .division-card li::before{
     content:""; position:absolute; left:0; top:8px;
-    width:6px; height:1px; background:var(--clay);
+    width:6px; height:1px; background:var(--terracotta);
   }
   .division-card .card-link{
     margin-top:6px; font-weight:700; font-size:14px; text-decoration:none;
-    color:var(--clay-dark); display:inline-flex; align-items:center; gap:6px;
+    color:var(--terracotta-dark); display:inline-flex; align-items:center; gap:6px;
     padding:10px 0; min-height:44px;
   }
   .division-card .card-link svg{ width:14px; height:14px; transition:transform .2s ease; }
@@ -336,8 +308,28 @@
   @media (max-width:960px){
     .division-grid{ grid-template-columns:1fr; }
     .hero-grid{ grid-template-columns:1fr; gap:44px; }
-    .hero-seal-wrap{ order:-1; }
+    .hero-logo-wrap{ order:-1; }
   }
+
+  /* ---------- LEDGER SECTION ---------- */
+  .ledger{ background:var(--ink); color:var(--cream-on-ink); }
+  .ledger .eyebrow{ color:#E3B972; }
+  .ledger .eyebrow::before{ background:#E3B972; }
+  .ledger-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
+    background:rgba(241,232,214,.12); margin-top:44px;
+    border:1px solid rgba(241,232,214,.12);
+  }
+  .ledger-entry{ background:var(--ink); padding:30px 26px; }
+  .ledger-entry .num{
+    font-family:'Newsreader', serif; font-weight:600; font-size:clamp(30px,3.4vw,42px);
+    color:var(--cream-on-ink);
+  }
+  .ledger-entry .label{
+    margin-top:8px; font-family:'Archivo', sans-serif; font-weight:600; font-size:12.5px;
+    letter-spacing:.02em; color:var(--cream-on-ink-70);
+  }
+  @media (max-width:760px){ .ledger-grid{ grid-template-columns:1fr 1fr; } }
 
   /* ---------- ABOUT ---------- */
   .about-grid{
@@ -345,68 +337,65 @@
   }
   .about-portrait{
     aspect-ratio:4/5;
-    background:radial-gradient(120% 100% at 30% 20%, #35291D 0%, var(--ink) 60%);
+    background:radial-gradient(120% 100% at 30% 20%, #3D3024 0%, var(--ink) 60%);
     display:flex; align-items:center; justify-content:center;
     position:relative; overflow:hidden;
     outline:1px solid var(--line); outline-offset:10px;
     box-shadow:var(--shadow-md);
   }
-  .about-portrait::after{
-    content:"";
-    position:absolute; inset:14px;
-    border:1px dashed rgba(200,138,74,.45);
-    pointer-events:none;
-  }
   .about-portrait .initials{
-    font-family:'Fraunces', serif; font-size:96px; color:var(--cream-on-ink); font-weight:500;
+    font-family:'Newsreader', serif; font-size:96px; color:var(--cream-on-ink); font-weight:500;
   }
-  .about-portrait .seal-corner{
-    position:absolute; bottom:18px; right:18px; width:52px; height:52px; opacity:.9;
+  .about-portrait .corner-mark{
+    display:block;
+    position:absolute; bottom:18px; right:18px;
+    width:44px; height:44px; border-radius:50%;
+    background:var(--cream); box-shadow:var(--shadow-sm);
   }
+  .about-portrait .corner-mark .logo-crop{ width:100%; height:100%; }
   .about h2{ font-size:clamp(28px, 3.4vw, 38px); }
   .about p{ color:var(--ink-70); font-size:16.5px; margin:16px 0 0; }
   .credentials{
     margin-top:28px; display:flex; flex-wrap:wrap; gap:10px;
   }
   .credential-tag{
-    font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:.06em;
+    font-family:'Archivo', sans-serif; font-weight:600; font-size:11.5px; letter-spacing:.03em;
     border:1px solid var(--gold); color:var(--gold);
     padding:8px 12px; border-radius:999px; text-transform:uppercase;
   }
 
   /* ---------- TRUST STRIP ---------- */
-  .trust{ background:var(--cream-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:56px 0; }
+  .trust{ background:var(--cream-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:52px 0; }
   .trust .wrap{ display:flex; flex-wrap:wrap; align-items:center; gap:40px; justify-content:space-between; }
-  .trust .trust-label{ font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-50); }
+  .trust .trust-label{ font-family:'Archivo', sans-serif; font-weight:700; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-50); }
   .trust-names{ display:flex; flex-wrap:wrap; gap:14px 16px; }
   .trust-names span{
-    font-family:'Fraunces', serif; font-size:17px; color:var(--ink);
-    padding:10px 20px; border:1px solid var(--line); background:var(--cream);
-    box-shadow:var(--shadow-sm);
+    font-family:'Newsreader', serif; font-size:16px; color:var(--ink);
+    padding:9px 18px; border:1px solid var(--line); background:var(--cream);
+    box-shadow:var(--shadow-sm); border-radius:999px;
   }
 
   /* ---------- CONTACT ---------- */
   .contact{
     background:var(--ink); color:var(--cream-on-ink);
   }
-  .contact .eyebrow{ color:var(--gold); }
-  .contact .eyebrow::before{ background:var(--gold); }
+  .contact .eyebrow{ color:#E3B972; }
+  .contact .eyebrow::before{ background:#E3B972; }
   .contact h2{ color:var(--cream-on-ink); font-size:clamp(30px, 4vw, 46px); }
   .contact p.lead{ color:var(--cream-on-ink-70); font-size:18px; max-width:56ch; margin:16px 0 34px; }
   .contact-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:56px; align-items:end; }
   .contact-detail{ display:flex; flex-direction:column; gap:6px; margin-bottom:22px; }
-  .contact-detail .k{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); }
+  .contact-detail .k{ font-family:'Archivo', sans-serif; font-weight:700; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:#E3B972; }
   .contact-detail .v{ font-size:17px; }
-  .contact-detail a{ text-decoration:none; border-bottom:1px solid var(--gold); }
-  .contact .btn-primary{ background:var(--clay); }
+  .contact-detail a{ text-decoration:none; border-bottom:1px solid #E3B972; }
+  .contact .btn-primary{ background:var(--terracotta); }
   .contact .btn-ghost{ border-color:var(--cream-on-ink); color:var(--cream-on-ink); }
   .contact .btn-ghost:hover{ background:var(--cream-on-ink); color:var(--ink); }
 
   /* ---------- FOOTER ---------- */
-  footer{ padding:36px 0; border-top:1px solid rgba(241,232,214,.14); }
+  footer{ padding:32px 0; border-top:1px solid rgba(241,232,214,.14); background:var(--ink); color:var(--cream-on-ink-70); }
   footer .wrap{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; }
-  footer .foot-mark{ display:flex; align-items:center; gap:10px; font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--cream-on-ink-70); }
-  footer .foot-mark svg{ width:20px; height:20px; }
+  footer .foot-mark{ display:flex; align-items:center; gap:10px; font-family:'Archivo', sans-serif; font-weight:600; font-size:12px; color:var(--cream-on-ink-70); }
   footer .foot-links{ display:flex; gap:22px; list-style:none; margin:0; padding:0; }
   footer .foot-links a{ font-size:13px; color:var(--cream-on-ink-70); text-decoration:none; }
   footer .foot-links a:hover{ color:var(--cream-on-ink); }
@@ -418,25 +407,12 @@
 </head>
 <body>
 
-<div class="certificate-frame" aria-hidden="true"></div>
 <div class="masthead-ribbon">Est. 2026 · Pittsburgh, PA · <strong>Valore Tech</strong> · Valore Talent · Valore Infrastructure</div>
 
 <header class="site-nav">
   <div class="nav-inner">
     <a href="#top" class="brand">
-      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-        <defs>
-          <radialGradient id="navWax" cx="35%" cy="28%" r="78%">
-            <stop offset="0%" stop-color="#9C3E2F"/>
-            <stop offset="65%" stop-color="#7A2320"/>
-            <stop offset="100%" stop-color="#5E1A18"/>
-          </radialGradient>
-        </defs>
-        <circle cx="20" cy="20" r="19.5" fill="none" stroke="#C88A4A" stroke-width="1" stroke-dasharray=".4 1.6" opacity="0.85"/>
-        <circle cx="20" cy="20" r="17" fill="url(#navWax)"/>
-        <circle cx="20" cy="20" r="13.5" fill="none" stroke="#C88A4A" stroke-width="0.6" opacity="0.8"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="17" fill="#EFD9B8">V</text>
-      </svg>
+      <span class="logo-crop"><img src="logo.png" alt="" aria-hidden="true"></span>
       Valore Group
     </a>
     <button class="nav-toggle-btn" id="navToggleBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
@@ -476,30 +452,16 @@
           <cite data-i18n="hero.quoteCite">Rechab, Founder</cite>
         </blockquote>
       </div>
-      <div class="hero-seal-wrap">
-        <svg class="seal" id="heroSeal" viewBox="0 0 200 200" aria-hidden="true">
-          <defs>
-            <radialGradient id="waxGrad" cx="35%" cy="30%" r="75%">
-              <stop offset="0%" stop-color="#9C3E2F"/>
-              <stop offset="65%" stop-color="#7A2320"/>
-              <stop offset="100%" stop-color="#5E1A18"/>
-            </radialGradient>
-          </defs>
-          <g>
-            <circle cx="100" cy="100" r="98" fill="none" stroke="#C88A4A" stroke-width="1.6" stroke-dasharray="1 5" opacity="0.85"/>
-            <circle cx="100" cy="100" r="88" fill="url(#waxGrad)" stroke="#5E1A18" stroke-width="1.5"/>
-            <circle cx="100" cy="100" r="76" fill="none" stroke="#C88A4A" stroke-width="1.2" opacity="0.7"/>
-            <text x="100" y="94" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="46" fill="#EFD9B8">V</text>
-            <text x="100" y="126" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2" fill="#EFD9B8">VALORE GROUP</text>
-            <text x="100" y="52" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="3" fill="#C88A4A">PITTSBURGH</text>
-          </g>
-        </svg>
+      <div class="hero-logo-wrap">
+        <div class="hero-logo-card" id="heroLogoCard">
+          <img src="logo.png" alt="Valore Group — hands holding up a growing seedling, with people rising alongside it">
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="wax-divider" aria-hidden="true">
-    <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="none" stroke="#B24A24" stroke-width="1" stroke-dasharray="1 4"/><circle cx="20" cy="20" r="4" fill="#9C7A34"/></svg>
+  <div class="growth-divider" aria-hidden="true">
+    <svg viewBox="0 0 32 32" fill="none"><path d="M16 28V10" stroke="#33532F" stroke-width="2" stroke-linecap="round"/><path d="M16 10C16 10 8 10 8 4C14 4 16 10 16 10Z" fill="#33532F"/><path d="M16 14C16 14 24 14 24 8C18 8 16 14 16 14Z" fill="#C9691E"/></svg>
   </div>
 
   <!-- DIVISIONS -->
@@ -508,17 +470,16 @@
       <div class="section-head reveal">
         <p class="eyebrow" data-i18n="div.eyebrow">THREE ARMS, ONE MISSION</p>
         <h2 data-i18n="div.h2">One group. Three ways it works.</h2>
-        <p data-i18n="div.p">Each division carries its own seal — a mark of what it stands for, and what it's responsible for.</p>
+        <p data-i18n="div.p">Each division carries its own mark — rooted in the same idea of growth and lifting people up.</p>
       </div>
 
       <div class="division-grid">
 
         <article class="division-card reveal">
-          <svg class="seal-small" viewBox="0 0 100 100" aria-hidden="true">
-            <circle cx="50" cy="50" r="46" fill="#7A2320"/>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#C88A4A" stroke-width="1"/>
-            <path d="M32 55 L44 42 L52 50 L68 34" stroke="#EFD9B8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="68" cy="34" r="3" fill="#EFD9B8"/>
+          <svg class="icon-badge" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="29" fill="#C9691E"/>
+            <path d="M18 38l7-7 5 5 10-10" stroke="#F5EFE3" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M32 26h8v8" stroke="#F5EFE3" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <p class="div-label" data-i18n="div.tech.label">THE ENGINE</p>
           <h3 data-i18n="div.tech.title">Valore Tech</h3>
@@ -535,12 +496,12 @@
         </article>
 
         <article class="division-card reveal">
-          <svg class="seal-small" viewBox="0 0 100 100" aria-hidden="true">
-            <circle cx="50" cy="50" r="46" fill="#7A2320"/>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#C88A4A" stroke-width="1"/>
-            <path d="M28 62 Q50 34 72 62" stroke="#EFD9B8" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <circle cx="28" cy="62" r="3" fill="#EFD9B8"/>
-            <circle cx="72" cy="62" r="3" fill="#EFD9B8"/>
+          <svg class="icon-badge" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="29" fill="#33532F"/>
+            <path d="M16 34c4-8 8-10 14-10s10 2 14 10" stroke="#F5EFE3" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="16" cy="34" r="3" fill="#F5EFE3"/>
+            <circle cx="44" cy="34" r="3" fill="#F5EFE3"/>
+            <path d="M30 24v-8" stroke="#F5EFE3" stroke-width="3" stroke-linecap="round"/>
           </svg>
           <p class="div-label" data-i18n="div.talent.label">THE BRIDGE</p>
           <h3 data-i18n="div.talent.title">Valore Talent</h3>
@@ -557,11 +518,10 @@
         </article>
 
         <article class="division-card reveal">
-          <svg class="seal-small" viewBox="0 0 100 100" aria-hidden="true">
-            <circle cx="50" cy="50" r="46" fill="#7A2320"/>
-            <circle cx="50" cy="50" r="38" fill="none" stroke="#C88A4A" stroke-width="1"/>
-            <rect x="34" y="40" width="32" height="20" rx="1" fill="none" stroke="#EFD9B8" stroke-width="3"/>
-            <line x1="34" y1="50" x2="66" y2="50" stroke="#EFD9B8" stroke-width="2"/>
+          <svg class="icon-badge" viewBox="0 0 60 60" aria-hidden="true">
+            <circle cx="30" cy="30" r="29" fill="#A6530F"/>
+            <path d="M30 20v10" stroke="#F5EFE3" stroke-width="3" stroke-linecap="round"/>
+            <path d="M30 30c0 0-8 2-10 8M30 30c0 0 8 2 10 8M30 30c0 0-4 4-4 10M30 30c0 0 4 4 4 10" stroke="#F5EFE3" stroke-width="2.4" fill="none" stroke-linecap="round"/>
           </svg>
           <p class="div-label" data-i18n="div.infra.label">THE BACKBONE</p>
           <h3 data-i18n="div.infra.title">Valore Infrastructure</h3>
@@ -601,7 +561,7 @@
         </div>
         <div class="ledger-entry reveal">
           <div class="num">2</div>
-          <div class="label" data-i18n="ledger.l4">Community partners — ARYSE · JFCS</div>
+          <div class="label" data-i18n="ledger.l4">Founder volunteers with ARYSE · JFCS</div>
         </div>
       </div>
     </div>
@@ -612,11 +572,7 @@
     <div class="wrap about-grid">
       <div class="about-portrait reveal">
         <span class="initials">R</span>
-        <svg class="seal-corner" viewBox="0 0 100 100" aria-hidden="true">
-          <circle cx="50" cy="50" r="46" fill="#7A2320" opacity="0.9"/>
-          <circle cx="50" cy="50" r="38" fill="none" stroke="#C88A4A" stroke-width="1"/>
-          <text x="50" y="58" text-anchor="middle" font-family="Fraunces, serif" font-size="26" fill="#EFD9B8">V</text>
-        </svg>
+        <span class="corner-mark"><span class="logo-crop"><img src="logo.png" alt=""></span></span>
       </div>
       <div class="about reveal">
         <p class="eyebrow" data-i18n="about.eyebrow">THE FOUNDER</p>
@@ -636,11 +592,11 @@
   <!-- TRUST -->
   <section class="trust">
     <div class="wrap">
-      <span class="trust-label" data-i18n="trust.label">Trusted alongside</span>
+      <span class="trust-label" data-i18n="trust.label">Rechab's community involvement</span>
       <div class="trust-names">
-        <span>ARYSE</span>
-        <span>JFCS</span>
-        <span>Carnegie Mellon University</span>
+        <span>ARYSE Volunteer</span>
+        <span>JFCS Volunteer</span>
+        <span>CMU STEM Ambassador</span>
       </div>
     </div>
   </section>
@@ -678,11 +634,7 @@
 <footer>
   <div class="wrap">
     <div class="foot-mark">
-      <svg viewBox="0 0 40 40" aria-hidden="true">
-        <circle cx="20" cy="20" r="19.5" fill="none" stroke="#C88A4A" stroke-width="1" stroke-dasharray=".4 1.6" opacity="0.85"/>
-        <circle cx="20" cy="20" r="13.5" fill="none" stroke="#9C7A34" stroke-width="0.8"/>
-        <text x="20" y="26" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="16" fill="#F1E8D6">V</text>
-      </svg>
+      <span class="logo-crop"><img src="logo.png" alt="" aria-hidden="true"></span>
       <span data-i18n="footer.tag">© 2026 Valore Group · Pittsburgh, PA</span>
     </div>
     <ul class="foot-links">
@@ -713,7 +665,7 @@
       "hero.quoteCite":"Rechab, Fondateur",
       "div.eyebrow":"TROIS BRANCHES, UNE MISSION",
       "div.h2":"Un groupe. Trois façons d'agir.",
-      "div.p":"Chaque division porte son propre sceau — une marque de ce qu'elle représente, et de ce dont elle est responsable.",
+      "div.p":"Chaque division porte sa propre marque — enracinée dans la même idée de croissance et d'élévation des personnes.",
       "div.tech.label":"LE MOTEUR",
       "div.tech.title":"Valore Tech",
       "div.tech.desc":"Développement web et IA pour les entreprises qui doivent avancer vite. Chaque projet finance le travail de mission de Valore Talent et Valore Infrastructure.",
@@ -740,7 +692,7 @@
       "ledger.l1":"Fondée à Pittsburgh",
       "ledger.l2":"Divisions, une seule mission",
       "ledger.l3":"Langues desservies — EN · FR · SG",
-      "ledger.l4":"Partenaires communautaires — ARYSE · JFCS",
+      "ledger.l4":"Le fondateur est bénévole chez ARYSE · JFCS",
       "about.eyebrow":"LE FONDATEUR",
       "about.h2":"Construit par quelqu'un qui l'a vécu.",
       "about.p1":"Rechab a fondé Valore Group alors qu'il était encore au lycée à Pittsburgh — développant des outils d'IA le jour, enseignant les matières STEM à des jeunes de 5 à 21 ans en tant qu'ambassadeur STEM de Carnegie Mellon, et faisant du bénévolat avec ARYSE et JFCS, deux organisations qui soutiennent les communautés réfugiées et immigrantes.",
@@ -749,7 +701,7 @@
       "about.tag2":"National Honor Society",
       "about.tag3":"Bénévole ARYSE",
       "about.tag4":"Bénévole JFCS",
-      "trust.label":"En toute confiance avec",
+      "trust.label":"Engagement communautaire de Rechab",
       "contact.eyebrow":"CONTACTEZ-NOUS",
       "contact.h2":"Mettons la valeur là où elle doit être.",
       "contact.lead":"Que vous cherchiez un partenaire technologique, votre prochaine opportunité, ou un soutien opérationnel pour votre organisme à but non lucratif — tout commence par une conversation.",
@@ -769,11 +721,6 @@
   };
 
   var current = 'en';
-  var originals = {};
-  document.querySelectorAll('[data-i18n]').forEach(function(el){
-    originals[el.getAttribute('data-i18n') + '::' + (el.closest('[data-i18n]') ? Math.random():'') ] = null;
-  });
-  // store originals per element directly
   var i18nEls = document.querySelectorAll('[data-i18n]');
   i18nEls.forEach(function(el){ el.dataset.original = el.innerHTML; });
 
@@ -813,9 +760,9 @@
     a.addEventListener('click', function(){ navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
   });
 
-  // ---- hero seal stamp ----
+  // ---- hero logo reveal ----
   window.addEventListener('load', function(){
-    document.getElementById('heroSeal').classList.add('stamped');
+    document.getElementById('heroLogoCard').classList.add('in');
   });
 
   // ---- scroll reveal ----
