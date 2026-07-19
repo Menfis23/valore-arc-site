@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valore Group — Pittsburgh Social Enterprise</title>
+<meta name="description" content="Valore Group is a Pittsburgh social enterprise connecting displaced and skilled professionals to real opportunity — through Valore Tech, Valore Talent, and Valore Infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cdefs%3E%3CradialGradient id='w' cx='35%25' cy='28%25' r='78%25'%3E%3Cstop offset='0%25' stop-color='%239C3E2F'/%3E%3Cstop offset='65%25' stop-color='%237A2320'/%3E%3Cstop offset='100%25' stop-color='%235E1A18'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='120' cy='120' r='108' fill='url(%23w)'/%3E%3Ccircle cx='120' cy='120' r='92' fill='none' stroke='%23C88A4A' stroke-width='2'/%3E%3Ctext x='120' y='152' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='104' fill='%23EFD9B8'%3EV%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --cream:#F5EFE3;
+    --cream-2:#EFE7D6;
+    --ink:#241C15;
+    --ink-70:rgba(36,28,21,.72);
+    --ink-50:rgba(36,28,21,.5);
+    --clay:#B24A24;
+    --clay-dark:#8F3A1B;
+    --gold:#9C7A34;
+    --wax:#7A2320;
+    --wax-light:#9C3E2F;
+    --line:#DCD0B7;
+    --cream-on-ink:#F1E8D6;
+    --cream-on-ink-70:rgba(241,232,214,.72);
+    --radius:2px;
+    --max:1180px;
+    --shadow-sm: 0 1px 2px rgba(36,28,21,.06), 0 2px 8px rgba(36,28,21,.05);
+    --shadow-md: 0 4px 12px rgba(36,28,21,.08), 0 12px 32px rgba(36,28,21,.07);
+    --shadow-lg: 0 8px 24px rgba(36,28,21,.10), 0 24px 56px rgba(36,28,21,.10);
+  }
+
+  /* ---------- MASTHEAD RIBBON ---------- */
+  .masthead-ribbon{
+    background:var(--ink); color:var(--cream-on-ink-70);
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; text-align:center; padding:9px 12px;
+  }
+  .masthead-ribbon strong{ color:var(--gold); font-weight:600; }
+
+  /* ---------- CERTIFICATE FRAME ---------- */
+  .certificate-frame{
+    position:fixed; inset:14px; pointer-events:none; z-index:40;
+    border:1px solid rgba(178,74,36,.16);
+  }
+  .certificate-frame::before, .certificate-frame::after{
+    content:""; position:absolute; width:26px; height:26px;
+    border:1px solid var(--gold); opacity:.55;
+  }
+  .certificate-frame::before{ top:-1px; left:-1px; border-right:none; border-bottom:none; }
+  .certificate-frame::after{ bottom:-1px; right:-1px; border-left:none; border-top:none; }
+  @media (max-width:720px){ .certificate-frame{ display:none; } }
+
+  /* ---------- LEDGER SECTION ---------- */
+  .ledger{ background:var(--ink); color:var(--cream-on-ink); border-top:1px solid rgba(241,232,214,.1); }
+  .ledger .eyebrow{ color:var(--gold); }
+  .ledger .eyebrow::before{ background:var(--gold); }
+  .ledger-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
+    background:rgba(241,232,214,.12); margin-top:44px;
+    border:1px solid rgba(241,232,214,.12);
+  }
+  .ledger-entry{ background:var(--ink); padding:30px 26px; }
+  .ledger-entry .num{
+    font-family:'Fraunces', serif; font-weight:600; font-size:clamp(30px,3.4vw,42px);
+    color:var(--cream-on-ink);
+  }
+  .ledger-entry .label{
+    margin-top:8px; font-family:'IBM Plex Mono', monospace; font-size:11.5px;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--cream-on-ink-70);
+  }
+  @media (max-width:760px){ .ledger-grid{ grid-template-columns:1fr 1fr; } }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  body{
+    margin:0;
+    background-color:var(--cream);
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.14  0 0 0 0 0.11  0 0 0 0 0.08  0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.08;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  h1, .contact h2{
+    text-shadow:0 1px 0 rgba(255,255,255,.35);
+  }
+  .contact h1, .contact h2{ text-shadow:0 1px 0 rgba(0,0,0,.3); }
+
+  a{color:inherit;}
+  img,svg{display:block; max-width:100%;}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--clay-dark);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;
+    height:1px;
+    background:var(--clay);
+    display:inline-block;
+  }
+
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
+    outline:2px solid var(--clay);
+    outline-offset:3px;
+  }
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(245,239,227,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    transition:box-shadow .25s ease, border-color .25s ease;
+  }
+  header.site-nav.scrolled{
+    box-shadow:var(--shadow-sm);
+    border-bottom-color:transparent;
+  }
+  .nav-inner{
+    max-width:var(--max); margin:0 auto; padding:16px 28px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:19px;
+    text-decoration:none; color:var(--ink);
+  }
+  .brand .mark{width:30px; height:30px;}
+  .nav-links{
+    display:flex; align-items:center; gap:28px;
+    list-style:none; margin:0; padding:0;
+  }
+  .nav-links a{
+    text-decoration:none;
+    font-size:14px; font-weight:600;
+    padding:10px 2px;
+    border-bottom:2px solid transparent;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .nav-links a:hover{border-color:var(--clay);}
+  .lang-toggle{
+    display:flex; border:1px solid var(--line); border-radius:999px; overflow:hidden;
+    font-family:'IBM Plex Mono', monospace; font-size:12px;
+  }
+  .lang-toggle button{
+    background:none; border:none; cursor:pointer;
+    padding:9px 13px; min-height:44px;
+    color:var(--ink-70); font-family:inherit; font-size:12px; letter-spacing:.05em;
+    transition:background .2s ease, color .2s ease;
+  }
+  .lang-toggle button[aria-pressed="true"]{
+    background:var(--ink); color:var(--cream);
+  }
+  .nav-toggle-btn{
+    display:none;
+    background:none; border:1px solid var(--line); border-radius:6px;
+    width:44px; height:44px; cursor:pointer; padding:0;
+    align-items:center; justify-content:center;
+  }
+  .nav-toggle-btn span, .nav-toggle-btn span::before, .nav-toggle-btn span::after{
+    content:""; display:block; width:18px; height:2px; background:var(--ink);
+    position:relative; transition:transform .2s ease;
+  }
+  .nav-toggle-btn span::before{ position:absolute; top:-6px; }
+  .nav-toggle-btn span::after{ position:absolute; top:6px; }
+
+  @media (max-width:860px){
+    .nav-links{
+      position:fixed; inset:64px 0 auto 0; background:var(--cream);
+      flex-direction:column; align-items:flex-start; gap:0;
+      border-bottom:1px solid var(--line);
+      transform:translateY(-8px); opacity:0; pointer-events:none;
+      transition:opacity .2s ease, transform .2s ease;
+    }
+    .nav-links.open{ opacity:1; transform:translateY(0); pointer-events:auto; }
+    .nav-links li{ width:100%; }
+    .nav-links a{ display:block; width:100%; padding:16px 28px; border-bottom:1px solid var(--line); }
+    .nav-toggle-btn{ display:flex; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:96px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.15fr .85fr; gap:64px; align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(38px, 5.4vw, 62px);
+    margin:18px 0 22px;
+  }
+  .hero p.lead{
+    font-size:19px; color:var(--ink-70); max-width:52ch; margin:0 0 30px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Public Sans', sans-serif; font-weight:700; font-size:14.5px;
+    padding:15px 24px; min-height:44px;
+    border-radius:var(--radius);
+    text-decoration:none; cursor:pointer; border:1px solid transparent;
+    transition:transform .18s ease, background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn:active{ transform:translateY(0); }
+  .btn-primary{ background:var(--clay); color:#fff; box-shadow:0 1px 3px rgba(178,74,36,.25), 0 8px 20px rgba(178,74,36,.22); }
+  .btn-primary:hover{ background:var(--clay-dark); box-shadow:0 2px 6px rgba(143,58,27,.3), 0 12px 28px rgba(143,58,27,.28); }
+  .btn-ghost{ background:transparent; color:var(--ink); border-color:var(--ink); }
+  .btn-ghost:hover{ background:var(--ink); color:var(--cream); }
+
+  .quote-block{
+    margin-top:40px; padding-top:28px; border-top:1px solid var(--line);
+    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
+    font-size:19px; line-height:1.5; color:var(--ink); max-width:56ch;
+  }
+  .quote-block cite{
+    display:block; margin-top:12px; font-style:normal; font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold);
+  }
+
+  /* hero seal */
+  .hero-seal-wrap{ display:flex; justify-content:center; align-items:center; }
+  .seal{
+    width:min(320px, 60vw); height:min(320px, 60vw);
+    transform:scale(1.5) rotate(-14deg);
+    opacity:0;
+  }
+  .seal.stamped{
+    animation:stamp .62s cubic-bezier(.2,.9,.25,1) forwards;
+  }
+  @keyframes stamp{
+    0%{ transform:scale(1.6) rotate(-18deg); opacity:0; }
+    55%{ transform:scale(.94) rotate(2deg); opacity:1; }
+    75%{ transform:scale(1.03) rotate(-1deg); }
+    100%{ transform:scale(1) rotate(0deg); opacity:1; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .seal{ transform:none; opacity:1; }
+  }
+
+  /* ---------- SECTIONS shared ---------- */
+  section{ padding:88px 0; }
+  .section-head{ max-width:64ch; margin-bottom:52px; padding-top:26px; border-top:3px double var(--line); position:relative; }
+  .section-head::before{
+    content:""; position:absolute; top:-6px; left:0;
+    width:10px; height:10px; border-radius:50%; background:var(--wax);
+    box-shadow:22px 0 0 -3px var(--gold);
+  }
+  .section-head h2{ font-size:clamp(28px, 3.6vw, 40px); margin-top:14px; }
+  .section-head p{ color:var(--ink-70); font-size:17px; margin-top:14px; }
+
+  /* ---------- WAX DIVIDER ---------- */
+  .wax-divider{ display:flex; align-items:center; justify-content:center; padding:0; }
+  .wax-divider svg{ width:34px; height:34px; opacity:.8; }
+
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; } }
+
+  /* ---------- DIVISIONS ---------- */
+  .divisions{ background:var(--cream-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .division-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:28px;
+  }
+  .division-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-top:3px solid var(--wax);
+    padding:36px 30px 32px;
+    display:flex; flex-direction:column; gap:18px;
+    min-height:100%;
+    box-shadow:var(--shadow-sm);
+    transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+  }
+  .division-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-md);
+  }
+  .division-card.reveal.in{ animation:cardReveal .6s ease forwards; }
+  .division-card.reveal.in:nth-child(2){ animation-delay:90ms; }
+  .division-card.reveal.in:nth-child(3){ animation-delay:180ms; }
+  @keyframes cardReveal{ to{ opacity:1; transform:translateY(0); } }
+  .division-card .seal-small{ width:64px; height:64px; }
+  .division-card .div-label{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--gold);
+  }
+  .division-card h3{ font-size:24px; margin-top:2px; }
+  .division-card p{ color:var(--ink-70); font-size:15.5px; flex-grow:1; }
+  .division-card ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  .division-card li{
+    font-size:13.5px; color:var(--ink-70);
+    padding-left:16px; position:relative;
+  }
+  .division-card li::before{
+    content:""; position:absolute; left:0; top:8px;
+    width:6px; height:1px; background:var(--clay);
+  }
+  .division-card .card-link{
+    margin-top:6px; font-weight:700; font-size:14px; text-decoration:none;
+    color:var(--clay-dark); display:inline-flex; align-items:center; gap:6px;
+    padding:10px 0; min-height:44px;
+  }
+  .division-card .card-link svg{ width:14px; height:14px; transition:transform .2s ease; }
+  .division-card .card-link:hover svg{ transform:translateX(3px); }
+
+  @media (max-width:960px){
+    .division-grid{ grid-template-columns:1fr; }
+    .hero-grid{ grid-template-columns:1fr; gap:44px; }
+    .hero-seal-wrap{ order:-1; }
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:start;
+  }
+  .about-portrait{
+    aspect-ratio:4/5;
+    background:radial-gradient(120% 100% at 30% 20%, #35291D 0%, var(--ink) 60%);
+    display:flex; align-items:center; justify-content:center;
+    position:relative; overflow:hidden;
+    outline:1px solid var(--line); outline-offset:10px;
+    box-shadow:var(--shadow-md);
+  }
+  .about-portrait::after{
+    content:"";
+    position:absolute; inset:14px;
+    border:1px dashed rgba(200,138,74,.45);
+    pointer-events:none;
+  }
+  .about-portrait .initials{
+    font-family:'Fraunces', serif; font-size:96px; color:var(--cream-on-ink); font-weight:500;
+  }
+  .about-portrait .seal-corner{
+    position:absolute; bottom:18px; right:18px; width:52px; height:52px; opacity:.9;
+  }
+  .about h2{ font-size:clamp(28px, 3.4vw, 38px); }
+  .about p{ color:var(--ink-70); font-size:16.5px; margin:16px 0 0; }
+  .credentials{
+    margin-top:28px; display:flex; flex-wrap:wrap; gap:10px;
+  }
+  .credential-tag{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:.06em;
+    border:1px solid var(--gold); color:var(--gold);
+    padding:8px 12px; border-radius:999px; text-transform:uppercase;
+  }
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust{ background:var(--cream-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:56px 0; }
+  .trust .wrap{ display:flex; flex-wrap:wrap; align-items:center; gap:40px; justify-content:space-between; }
+  .trust .trust-label{ font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-50); }
+  .trust-names{ display:flex; flex-wrap:wrap; gap:14px 16px; }
+  .trust-names span{
+    font-family:'Fraunces', serif; font-size:17px; color:var(--ink);
+    padding:10px 20px; border:1px solid var(--line); background:var(--cream);
+    box-shadow:var(--shadow-sm);
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--ink); color:var(--cream-on-ink);
+  }
+  .contact .eyebrow{ color:var(--gold); }
+  .contact .eyebrow::before{ background:var(--gold); }
+  .contact h2{ color:var(--cream-on-ink); font-size:clamp(30px, 4vw, 46px); }
+  .contact p.lead{ color:var(--cream-on-ink-70); font-size:18px; max-width:56ch; margin:16px 0 34px; }
+  .contact-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:56px; align-items:end; }
+  .contact-detail{ display:flex; flex-direction:column; gap:6px; margin-bottom:22px; }
+  .contact-detail .k{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); }
+  .contact-detail .v{ font-size:17px; }
+  .contact-detail a{ text-decoration:none; border-bottom:1px solid var(--gold); }
+  .contact .btn-primary{ background:var(--clay); }
+  .contact .btn-ghost{ border-color:var(--cream-on-ink); color:var(--cream-on-ink); }
+  .contact .btn-ghost:hover{ background:var(--cream-on-ink); color:var(--ink); }
+
+  /* ---------- FOOTER ---------- */
+  footer{ padding:36px 0; border-top:1px solid rgba(241,232,214,.14); }
+  footer .wrap{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px; }
+  footer .foot-mark{ display:flex; align-items:center; gap:10px; font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--cream-on-ink-70); }
+  footer .foot-mark svg{ width:20px; height:20px; }
+  footer .foot-links{ display:flex; gap:22px; list-style:none; margin:0; padding:0; }
+  footer .foot-links a{ font-size:13px; color:var(--cream-on-ink-70); text-decoration:none; }
+  footer .foot-links a:hover{ color:var(--cream-on-ink); }
+
+  .sg-note{
+    margin-top:14px; font-size:13px; color:var(--ink-50); font-style:italic;
+  }
+</style>
+</head>
+<body>
+
+<div class="certificate-frame" aria-hidden="true"></div>
+<div class="masthead-ribbon">Est. 2026 · Pittsburgh, PA · <strong>Valore Tech</strong> · Valore Talent · Valore Infrastructure</div>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <defs>
+          <radialGradient id="navWax" cx="35%" cy="28%" r="78%">
+            <stop offset="0%" stop-color="#9C3E2F"/>
+            <stop offset="65%" stop-color="#7A2320"/>
+            <stop offset="100%" stop-color="#5E1A18"/>
+          </radialGradient>
+        </defs>
+        <circle cx="20" cy="20" r="19.5" fill="none" stroke="#C88A4A" stroke-width="1" stroke-dasharray=".4 1.6" opacity="0.85"/>
+        <circle cx="20" cy="20" r="17" fill="url(#navWax)"/>
+        <circle cx="20" cy="20" r="13.5" fill="none" stroke="#C88A4A" stroke-width="0.6" opacity="0.8"/>
+        <text x="20" y="26" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="17" fill="#EFD9B8">V</text>
+      </svg>
+      Valore Group
+    </a>
+    <button class="nav-toggle-btn" id="navToggleBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#divisions" data-i18n="nav.divisions">Our Divisions</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+          <button type="button" data-lang="sg" aria-pressed="false">SG</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow" data-i18n="hero.eyebrow">PITTSBURGH · SOCIAL ENTERPRISE</p>
+        <h1 data-i18n="hero.h1">Every human being arrives with value.</h1>
+        <p class="lead" data-i18n="hero.lead">Valore Group connects displaced and skilled professionals to real opportunity — funded by the technology we build and the operations we run for those already doing the work.</p>
+        <div class="hero-ctas">
+          <a href="#divisions" class="btn btn-primary" data-i18n="hero.cta1">See Our Divisions</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Partner With Us</a>
+        </div>
+        <blockquote class="quote-block">
+          <p data-i18n="hero.quote">"I don't see refugees — I see doctors, artists, engineers, and leaders waiting for the world to catch up."</p>
+          <cite data-i18n="hero.quoteCite">Rechab, Founder</cite>
+        </blockquote>
+      </div>
+      <div class="hero-seal-wrap">
+        <svg class="seal" id="heroSeal" viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <radialGradient id="waxGrad" cx="35%" cy="30%" r="75%">
+              <stop offset="0%" stop-color="#9C3E2F"/>
+              <stop offset="65%" stop-color="#7A2320"/>
+              <stop offset="100%" stop-color="#5E1A18"/>
+            </radialGradient>
+          </defs>
+          <g>
+            <circle cx="100" cy="100" r="98" fill="none" stroke="#C88A4A" stroke-width="1.6" stroke-dasharray="1 5" opacity="0.85"/>
+            <circle cx="100" cy="100" r="88" fill="url(#waxGrad)" stroke="#5E1A18" stroke-width="1.5"/>
+            <circle cx="100" cy="100" r="76" fill="none" stroke="#C88A4A" stroke-width="1.2" opacity="0.7"/>
+            <text x="100" y="94" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="46" fill="#EFD9B8">V</text>
+            <text x="100" y="126" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2" fill="#EFD9B8">VALORE GROUP</text>
+            <text x="100" y="52" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="3" fill="#C88A4A">PITTSBURGH</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wax-divider" aria-hidden="true">
+    <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="none" stroke="#B24A24" stroke-width="1" stroke-dasharray="1 4"/><circle cx="20" cy="20" r="4" fill="#9C7A34"/></svg>
+  </div>
+
+  <!-- DIVISIONS -->
+  <section class="divisions" id="divisions">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="div.eyebrow">THREE ARMS, ONE MISSION</p>
+        <h2 data-i18n="div.h2">One group. Three ways it works.</h2>
+        <p data-i18n="div.p">Each division carries its own seal — a mark of what it stands for, and what it's responsible for.</p>
+      </div>
+
+      <div class="division-grid">
+
+        <article class="division-card reveal">
+          <svg class="seal-small" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" fill="#7A2320"/>
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#C88A4A" stroke-width="1"/>
+            <path d="M32 55 L44 42 L52 50 L68 34" stroke="#EFD9B8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="68" cy="34" r="3" fill="#EFD9B8"/>
+          </svg>
+          <p class="div-label" data-i18n="div.tech.label">THE ENGINE</p>
+          <h3 data-i18n="div.tech.title">Valore Tech</h3>
+          <p data-i18n="div.tech.desc">AI and web development for businesses that need to move fast. Every project funds the mission work of Valore Talent and Valore Infrastructure.</p>
+          <ul>
+            <li data-i18n="div.tech.li1">AI-powered websites &amp; apps</li>
+            <li data-i18n="div.tech.li2">Automation &amp; workflow tools</li>
+            <li data-i18n="div.tech.li3">Brand &amp; digital strategy</li>
+          </ul>
+          <a href="#contact" class="card-link" data-i18n="div.tech.link">
+            <span>Work with Valore Tech</span>
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="division-card reveal">
+          <svg class="seal-small" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" fill="#7A2320"/>
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#C88A4A" stroke-width="1"/>
+            <path d="M28 62 Q50 34 72 62" stroke="#EFD9B8" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="28" cy="62" r="3" fill="#EFD9B8"/>
+            <circle cx="72" cy="62" r="3" fill="#EFD9B8"/>
+          </svg>
+          <p class="div-label" data-i18n="div.talent.label">THE BRIDGE</p>
+          <h3 data-i18n="div.talent.title">Valore Talent</h3>
+          <p data-i18n="div.talent.desc">Connecting refugee and skilled professionals — doctors, engineers, artists, leaders — to the roles and networks that recognize what they already know.</p>
+          <ul>
+            <li data-i18n="div.talent.li1">Career placement &amp; mentorship</li>
+            <li data-i18n="div.talent.li2">Credential navigation</li>
+            <li data-i18n="div.talent.li3">Employer partnerships</li>
+          </ul>
+          <a href="#contact" class="card-link" data-i18n="div.talent.link">
+            <span>Connect with Valore Talent</span>
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+        <article class="division-card reveal">
+          <svg class="seal-small" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="46" fill="#7A2320"/>
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#C88A4A" stroke-width="1"/>
+            <rect x="34" y="40" width="32" height="20" rx="1" fill="none" stroke="#EFD9B8" stroke-width="3"/>
+            <line x1="34" y1="50" x2="66" y2="50" stroke="#EFD9B8" stroke-width="2"/>
+          </svg>
+          <p class="div-label" data-i18n="div.infra.label">THE BACKBONE</p>
+          <h3 data-i18n="div.infra.title">Valore Infrastructure</h3>
+          <p data-i18n="div.infra.desc">Behind-the-scenes operations — systems, process, and support — so nonprofits can spend their time on mission, not maintenance.</p>
+          <ul>
+            <li data-i18n="div.infra.li1">Operations &amp; systems support</li>
+            <li data-i18n="div.infra.li2">Nonprofit tooling</li>
+            <li data-i18n="div.infra.li3">Process design</li>
+          </ul>
+          <a href="#contact" class="card-link" data-i18n="div.infra.link">
+            <span>Talk to Valore Infrastructure</span>
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LEDGER -->
+  <section class="ledger">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="ledger.eyebrow">THE RECORD</p>
+      <h2 data-i18n="ledger.h2">What Valore stands on.</h2>
+      <div class="ledger-grid">
+        <div class="ledger-entry reveal">
+          <div class="num">2026</div>
+          <div class="label" data-i18n="ledger.l1">Founded in Pittsburgh</div>
+        </div>
+        <div class="ledger-entry reveal">
+          <div class="num">3</div>
+          <div class="label" data-i18n="ledger.l2">Divisions, one mission</div>
+        </div>
+        <div class="ledger-entry reveal">
+          <div class="num">3</div>
+          <div class="label" data-i18n="ledger.l3">Languages served — EN · FR · SG</div>
+        </div>
+        <div class="ledger-entry reveal">
+          <div class="num">2</div>
+          <div class="label" data-i18n="ledger.l4">Community partners — ARYSE · JFCS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-portrait reveal">
+        <span class="initials">R</span>
+        <svg class="seal-corner" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#7A2320" opacity="0.9"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="#C88A4A" stroke-width="1"/>
+          <text x="50" y="58" text-anchor="middle" font-family="Fraunces, serif" font-size="26" fill="#EFD9B8">V</text>
+        </svg>
+      </div>
+      <div class="about reveal">
+        <p class="eyebrow" data-i18n="about.eyebrow">THE FOUNDER</p>
+        <h2 data-i18n="about.h2">Built by someone who's lived it.</h2>
+        <p data-i18n="about.p1">Rechab founded Valore Group while still in high school in Pittsburgh — building AI tools by day, teaching STEM to students ages 5 to 21 as a Carnegie Mellon STEM Ambassador, and volunteering with ARYSE and JFCS, two organizations supporting refugee and immigrant communities.</p>
+        <p data-i18n="about.p2">His own family's story of displacement shapes how Valore works: value isn't something people have to prove. It's something the world has to recognize.</p>
+        <div class="credentials">
+          <span class="credential-tag" data-i18n="about.tag1">CMU STEM Ambassador</span>
+          <span class="credential-tag" data-i18n="about.tag2">National Honor Society</span>
+          <span class="credential-tag" data-i18n="about.tag3">ARYSE Volunteer</span>
+          <span class="credential-tag" data-i18n="about.tag4">JFCS Volunteer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap">
+      <span class="trust-label" data-i18n="trust.label">Trusted alongside</span>
+      <div class="trust-names">
+        <span>ARYSE</span>
+        <span>JFCS</span>
+        <span>Carnegie Mellon University</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <p class="eyebrow" data-i18n="contact.eyebrow">GET IN TOUCH</p>
+          <h2 data-i18n="contact.h2">Let's put value where it belongs.</h2>
+          <p class="lead" data-i18n="contact.lead">Whether you need a technology partner, you're looking for your next opportunity, or your nonprofit needs operational support — we start with a conversation.</p>
+          <a href="mailto:valore.arc@gmail.com" class="btn btn-primary" data-i18n="contact.cta">Start a Conversation</a>
+        </div>
+        <div>
+          <div class="contact-detail">
+            <span class="k" data-i18n="contact.emailLabel">Email</span>
+            <span class="v"><a href="mailto:valore.arc@gmail.com">valore.arc@gmail.com</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="k" data-i18n="contact.locationLabel">Location</span>
+            <span class="v" data-i18n="contact.location">Pittsburgh, Pennsylvania</span>
+          </div>
+          <div class="contact-detail">
+            <span class="k" data-i18n="contact.divisionsLabel">Divisions</span>
+            <span class="v">Tech · Talent · Infrastructure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-mark">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19.5" fill="none" stroke="#C88A4A" stroke-width="1" stroke-dasharray=".4 1.6" opacity="0.85"/>
+        <circle cx="20" cy="20" r="13.5" fill="none" stroke="#9C7A34" stroke-width="0.8"/>
+        <text x="20" y="26" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="16" fill="#F1E8D6">V</text>
+      </svg>
+      <span data-i18n="footer.tag">© 2026 Valore Group · Pittsburgh, PA</span>
+    </div>
+    <ul class="foot-links">
+      <li><a href="#divisions" data-i18n="nav.divisions">Our Divisions</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- i18n ----
+  var dict = {
+    en: {},
+    fr: {
+      "nav.divisions":"Nos Divisions",
+      "nav.about":"À Propos",
+      "nav.portfolio":"Portfolio",
+      "nav.contact":"Contact",
+      "hero.eyebrow":"PITTSBURGH · ENTREPRISE SOCIALE",
+      "hero.h1":"Chaque être humain arrive avec de la valeur.",
+      "hero.lead":"Valore Group met en relation des professionnels déplacés et qualifiés avec de véritables opportunités — financée par la technologie que nous développons et les opérations que nous assurons pour ceux qui font déjà le travail.",
+      "hero.cta1":"Découvrir nos divisions",
+      "hero.cta2":"Devenir partenaire",
+      "hero.quote":"« Je ne vois pas des réfugiés — je vois des médecins, des artistes, des ingénieurs et des leaders qui attendent que le monde les rattrape. »",
+      "hero.quoteCite":"Rechab, Fondateur",
+      "div.eyebrow":"TROIS BRANCHES, UNE MISSION",
+      "div.h2":"Un groupe. Trois façons d'agir.",
+      "div.p":"Chaque division porte son propre sceau — une marque de ce qu'elle représente, et de ce dont elle est responsable.",
+      "div.tech.label":"LE MOTEUR",
+      "div.tech.title":"Valore Tech",
+      "div.tech.desc":"Développement web et IA pour les entreprises qui doivent avancer vite. Chaque projet finance le travail de mission de Valore Talent et Valore Infrastructure.",
+      "div.tech.li1":"Sites et applications propulsés par l'IA",
+      "div.tech.li2":"Automatisation et outils de flux de travail",
+      "div.tech.li3":"Stratégie de marque et numérique",
+      "div.tech.link":"Travailler avec Valore Tech",
+      "div.talent.label":"LE PONT",
+      "div.talent.title":"Valore Talent",
+      "div.talent.desc":"Nous mettons en relation des professionnels réfugiés et qualifiés — médecins, ingénieurs, artistes, leaders — avec les postes et réseaux qui reconnaissent ce qu'ils savent déjà faire.",
+      "div.talent.li1":"Placement de carrière et mentorat",
+      "div.talent.li2":"Navigation des équivalences de diplômes",
+      "div.talent.li3":"Partenariats avec les employeurs",
+      "div.talent.link":"Contacter Valore Talent",
+      "div.infra.label":"L'OSSATURE",
+      "div.infra.title":"Valore Infrastructure",
+      "div.infra.desc":"Des opérations en coulisses — systèmes, processus et soutien — pour que les organismes à but non lucratif puissent se concentrer sur leur mission, pas sur la maintenance.",
+      "div.infra.li1":"Soutien aux opérations et systèmes",
+      "div.infra.li2":"Outils pour organismes à but non lucratif",
+      "div.infra.li3":"Conception de processus",
+      "div.infra.link":"Parler à Valore Infrastructure",
+      "ledger.eyebrow":"LE REGISTRE",
+      "ledger.h2":"Ce sur quoi Valore repose.",
+      "ledger.l1":"Fondée à Pittsburgh",
+      "ledger.l2":"Divisions, une seule mission",
+      "ledger.l3":"Langues desservies — EN · FR · SG",
+      "ledger.l4":"Partenaires communautaires — ARYSE · JFCS",
+      "about.eyebrow":"LE FONDATEUR",
+      "about.h2":"Construit par quelqu'un qui l'a vécu.",
+      "about.p1":"Rechab a fondé Valore Group alors qu'il était encore au lycée à Pittsburgh — développant des outils d'IA le jour, enseignant les matières STEM à des jeunes de 5 à 21 ans en tant qu'ambassadeur STEM de Carnegie Mellon, et faisant du bénévolat avec ARYSE et JFCS, deux organisations qui soutiennent les communautés réfugiées et immigrantes.",
+      "about.p2":"L'histoire de déplacement de sa propre famille façonne la manière dont Valore travaille : la valeur n'est pas quelque chose que l'on doit prouver. C'est quelque chose que le monde doit reconnaître.",
+      "about.tag1":"Ambassadeur STEM à CMU",
+      "about.tag2":"National Honor Society",
+      "about.tag3":"Bénévole ARYSE",
+      "about.tag4":"Bénévole JFCS",
+      "trust.label":"En toute confiance avec",
+      "contact.eyebrow":"CONTACTEZ-NOUS",
+      "contact.h2":"Mettons la valeur là où elle doit être.",
+      "contact.lead":"Que vous cherchiez un partenaire technologique, votre prochaine opportunité, ou un soutien opérationnel pour votre organisme à but non lucratif — tout commence par une conversation.",
+      "contact.cta":"Commencer une conversation",
+      "contact.emailLabel":"E-mail",
+      "contact.locationLabel":"Emplacement",
+      "contact.location":"Pittsburgh, Pennsylvanie",
+      "contact.divisionsLabel":"Divisions",
+      "footer.tag":"© 2026 Valore Group · Pittsburgh, PA"
+    },
+    sg: {
+      "hero.eyebrow":"PITTSBURGH · BARA",
+      "hero.h1":"Every human being arrives with value.",
+      "hero.quote":"« Bara — this page is still being translated into Sängö. »",
+      "hero.quoteCite":"Rechab, Founder"
+    }
+  };
+
+  var current = 'en';
+  var originals = {};
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    originals[el.getAttribute('data-i18n') + '::' + (el.closest('[data-i18n]') ? Math.random():'') ] = null;
+  });
+  // store originals per element directly
+  var i18nEls = document.querySelectorAll('[data-i18n]');
+  i18nEls.forEach(function(el){ el.dataset.original = el.innerHTML; });
+
+  function setLang(lang){
+    current = lang;
+    document.documentElement.lang = lang;
+    i18nEls.forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      var val = dict[lang] && dict[lang][key];
+      el.innerHTML = (val !== undefined) ? val : el.dataset.original;
+    });
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn){
+      btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+    });
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(function(btn){
+    btn.addEventListener('click', function(){ setLang(btn.dataset.lang); });
+  });
+
+  // ---- nav elevation on scroll ----
+  var navEl = document.querySelector('header.site-nav');
+  function onScroll(){
+    navEl.classList.toggle('scrolled', window.scrollY > 8);
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  // ---- mobile nav ----
+  var navToggle = document.getElementById('navToggleBtn');
+  var navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ navLinks.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); });
+  });
+
+  // ---- hero seal stamp ----
+  window.addEventListener('load', function(){
+    document.getElementById('heroSeal').classList.add('stamped');
+  });
+
+  // ---- scroll reveal ----
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduced && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>
